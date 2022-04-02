@@ -1,4 +1,4 @@
-package org.train.leetcode;
+package org.train.leetcode.arrays;
 
 import java.util.HashMap;
 import java.util.Map;

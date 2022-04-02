@@ -1,4 +1,4 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 //Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 //Input: s = "abca"

@@ -1,12 +1,6 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 public class $0844BackspaceStringCompare {
-
-    public static void main(String[] args) {
-        System.out.println(backspaceCompare("ab#c", "ad#c")); // true
-        System.out.println(backspaceCompare("ab##", "c#d#")); // true
-        System.out.println(backspaceCompare("bxj##tw", "bxj###tw")); // false
-    }
 
     public static boolean backspaceCompare(String s, String t) {
         int i = s.length() - 1, j = t.length() - 1;

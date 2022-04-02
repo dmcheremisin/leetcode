@@ -1,6 +1,7 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
+import org.train.leetcode.strings.$0844BackspaceStringCompare;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;

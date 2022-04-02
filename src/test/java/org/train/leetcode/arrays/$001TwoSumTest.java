@@ -1,6 +1,7 @@
-package org.train.leetcode;
+package org.train.leetcode.arrays;
 
 import org.junit.jupiter.api.Test;
+import org.train.leetcode.arrays.$0001TwoSum;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 

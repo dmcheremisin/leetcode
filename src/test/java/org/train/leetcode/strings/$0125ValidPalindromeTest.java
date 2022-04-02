@@ -1,10 +1,10 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.train.leetcode.$0125ValidPalindrome.isPalindrome;
-import static org.train.leetcode.$0125ValidPalindrome.isPalindromeRegexp;
+import static org.train.leetcode.strings.$0125ValidPalindrome.isPalindrome;
+import static org.train.leetcode.strings.$0125ValidPalindrome.isPalindromeRegexp;
 
 class $0125ValidPalindromeTest {
 

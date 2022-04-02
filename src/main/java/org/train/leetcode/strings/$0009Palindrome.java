@@ -1,4 +1,4 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import java.util.ArrayList;
 import java.util.List;

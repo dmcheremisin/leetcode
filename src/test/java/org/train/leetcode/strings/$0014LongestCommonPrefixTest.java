@@ -1,6 +1,7 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
+import org.train.leetcode.strings.$0014LongestCommonPrefix;
 
 import static org.junit.jupiter.api.Assertions.*;
 

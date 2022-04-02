@@ -1,4 +1,4 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import java.util.HashMap;
 import java.util.Map;

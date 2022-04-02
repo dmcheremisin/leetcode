@@ -1,9 +1,9 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.train.leetcode.$0680ValidPalindrome.validPalindrome;
+import static org.train.leetcode.strings.$0680ValidPalindrome.validPalindrome;
 
 class $0680ValidPalindromeTest {
 

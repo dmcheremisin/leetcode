@@ -1,10 +1,10 @@
-package org.train.leetcode;
+package org.train.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.train.leetcode.$0003LongestSubstring.lengthOfLongestSubstring;
-import static org.train.leetcode.$0003LongestSubstring.lengthOfLongestSubstring2;
+import static org.train.leetcode.strings.$0003LongestSubstring.lengthOfLongestSubstring;
+import static org.train.leetcode.strings.$0003LongestSubstring.lengthOfLongestSubstring2;
 
 class $0003LongestSubstringTest {
 
