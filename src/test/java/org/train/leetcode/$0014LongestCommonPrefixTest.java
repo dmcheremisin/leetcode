@@ -25,4 +25,22 @@ class $0014LongestCommonPrefixTest {
         String result = prefix.longestCommonPrefix(new String[]{"ab", "a"});
         assertEquals("a", result);
     }
+
+    @Test
+    void longestCommonPrefixFl2() {
+        String result = prefix.longestCommonPrefix2(new String[]{"flower", "flow", "flight"});
+        assertEquals("fl", result);
+    }
+
+    @Test
+    void longestCommonPrefixNo2() {
+        String result = prefix.longestCommonPrefix2(new String[]{"dog","racecar","car"});
+        assertEquals("", result);
+    }
+
+    @Test
+    void longestCommonPrefixA2() {
+        String result = prefix.longestCommonPrefix2(new String[]{"ab", "a"});
+        assertEquals("a", result);
+    }
 }

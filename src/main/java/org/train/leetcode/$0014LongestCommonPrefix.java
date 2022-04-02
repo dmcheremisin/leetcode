@@ -6,7 +6,7 @@ package org.train.leetcode;
  * Example:
  * Input: strs = ["flower","flow","flight"]
  * Output: "fl"
- *
+ * <p>
  * Constraints:
  * 1 <= strs.length <= 200
  * 0 <= strs[i].length <= 200
@@ -37,5 +37,25 @@ public class $0014LongestCommonPrefix {
             }
         }
         return true;
+    }
+
+    public String longestCommonPrefix2(String[] strs) {
+        int arrayLength = strs.length;
+        String firstString = strs[0];
+        if (arrayLength == 1)
+            return firstString;
+
+        int minCommonLength = firstString.length();
+        for (int i = 1; i < arrayLength; i++)
+            minCommonLength = Math.min(minCommonLength, strs[i].length());
+
+        for (int i = 0; i < minCommonLength; i++) {
+            char c = firstString.charAt(i);
+            for (int j = 1; j < arrayLength; j++) {
+                if (c != strs[j].charAt(i))
+                    return firstString.substring(0, i);
+            }
+        }
+        return firstString.substring(0, minCommonLength);
     }
 }
