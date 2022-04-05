@@ -3,13 +3,26 @@ package org.train.leetcode.linkedlist;
 public class Utils {
 
     public static ListNode getListNodes() {
-        ListNode head = new ListNode(1);
-        ListNode current = head;
-        for (int i = 2; i <= 5; i++) {
-            current.next = new ListNode(i);
-            current = current.next;
-        }
-        return head;
+        return new ListNode(1,
+                new ListNode(2,
+                        new ListNode(3,
+                                new ListNode(4,
+                                        new ListNode(5)
+                                )
+                        )
+                )
+        );
+    }
+
+    public static ListNode getListNodesWithCycle() {
+        ListNode five = new ListNode(5);
+        ListNode three = new ListNode(3,
+                new ListNode(4, five)
+        );
+        five.next = three;
+        return new ListNode(1,
+                new ListNode(2, three)
+        );
     }
 
     public static Node getMultiLevelNodes() {
