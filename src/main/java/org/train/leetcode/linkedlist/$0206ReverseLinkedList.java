@@ -4,7 +4,7 @@ package org.train.leetcode.linkedlist;
 //Input: head = [1,2,3,4,5]
 //Output: [5,4,3,2,1]
 
-public class ReverseLinkedList {
+public class $0206ReverseLinkedList {
 
     public static ListNode reverseList(ListNode head) {
         ListNode prev = null;

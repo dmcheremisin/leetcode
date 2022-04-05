@@ -3,10 +3,10 @@ package org.train.leetcode.linkedlist;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.train.leetcode.linkedlist.ReverseLinkedList.reverseList;
+import static org.train.leetcode.linkedlist.$0206ReverseLinkedList.reverseList;
 import static org.train.leetcode.linkedlist.Utils.getListNodes;
 
-class ReverseLinkedListTest {
+class $0206ReverseLinkedListTest {
 
     @Test
     void reverseListTest() {
