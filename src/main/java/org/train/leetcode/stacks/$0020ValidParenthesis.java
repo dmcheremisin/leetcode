@@ -3,6 +3,12 @@ package org.train.leetcode.stacks;
 import java.util.Map;
 import java.util.Stack;
 
+//Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+//Input: s = "()[]{}"
+//Output: true
+//Input: s = "(]"
+//Output: false
+
 class $0020ValidParenthesis {
 
     public static boolean isValid(String s) {
