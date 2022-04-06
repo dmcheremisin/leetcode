@@ -18,24 +18,23 @@ class $1249MinimumRemoveToMakeValidParenthesis {
     public static String minRemoveToMakeValid(String s) {
         char[] chars = s.toCharArray();
 
-        Deque<Integer> position = new LinkedList<>();
+        Deque<Integer> positions = new LinkedList<>();
         for (int i = 0; i < chars.length; i++) {
             if (chars[i] == '(')
-                position.push(i);
-            else if (chars[i] == ')'){
-                if (position.isEmpty()) {
+                positions.push(i);
+            else if (chars[i] == ')') {
+                if (positions.isEmpty()) {
                     chars[i] = ' ';
                 } else {
-                    position.pop();
+                    positions.pop();
                 }
             }
         }
-        while (!position.isEmpty()) {
-            Integer index = position.pop();
+        while (!positions.isEmpty()) {
+            Integer index = positions.pop();
             chars[index] = ' ';
         }
-        String validString = new String(chars);
 
-        return validString.replace(" ", "");
+        return new String(chars).replace(" ", "");
     }
 }
