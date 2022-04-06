@@ -7,32 +7,32 @@ import java.util.Stack;
 
 public class $0232ImplementQueueUsingStacks {
 
-    Stack<Integer> first = new Stack<>();
-    Stack<Integer> second = new Stack<>();
+    Stack<Integer> in = new Stack<>();
+    Stack<Integer> out = new Stack<>();
 
     public void push(int x) {
-        first.push(x);
+        in.push(x);
     }
 
     public int pop() {
-        if (second.isEmpty()) {
-            while (!first.isEmpty())
-                second.push(first.pop());
+        if (out.isEmpty()) {
+            while (!in.isEmpty())
+                out.push(in.pop());
         }
 
-        return second.pop();
+        return out.pop();
     }
 
     public int peek() {
-        if (second.isEmpty()) {
-            while (!first.isEmpty())
-                second.push(first.pop());
+        if (out.isEmpty()) {
+            while (!in.isEmpty())
+                out.push(in.pop());
         }
 
-        return second.peek();
+        return out.peek();
     }
 
     public boolean empty() {
-        return first.isEmpty() && second.isEmpty();
+        return in.isEmpty() && out.isEmpty();
     }
 }
