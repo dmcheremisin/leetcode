@@ -13,7 +13,7 @@ import java.util.Map;
 //The i-th employee needs informTime[i] minutes to inform all of his direct subordinates
 //(i.e., After informTime[i] minutes, all his direct subordinates can start spreading the news).
 //Return the number of minutes needed to inform all the employees about the urgent news.
-//Input: n = 6, headID = 2, manager = [0:2, 1:2, 2:4, 3:6, 4:-1, 5:4, 6:4, 7:5], informTime = [0, 0, 4, 0, 7, 3, 6, 0]
+//Input: n = 8, headID = 4, manager = [0:2, 1:2, 2:4, 3:6, 4:-1, 5:4, 6:4, 7:5], informTime = [0, 0, 4, 0, 7, 3, 6, 0]
 // 0: []
 // 1: []
 // 2: [0, 1] => subordinates 0 & 1
