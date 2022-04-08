@@ -40,9 +40,9 @@ public class $0207CourseSchedule {
 
         int count = 0;
         while (!stack.isEmpty()) {
-            var current = stack.pop();
+            int current = stack.pop();
             count++;
-            var adjacent = adjList.get(current);
+            List<Integer> adjacent = adjList.get(current);
             for (int next : adjacent) {
                 inDegree[next]--;
                 if (inDegree[next] == 0)
