@@ -33,8 +33,9 @@ public class $0743NetworkDelayTime {
             List<Integer[]> edges = adjList.get(current);
             for (Integer[] edge : edges) {
                 int target = edge[0];
-                if (distances[target] > distances[current] + edge[1]) {
-                    distances[target] = distances[current] + edge[1];
+                int weight = edge[1];
+                if (distances[target] > distances[current] + weight) {
+                    distances[target] = distances[current] + weight;
                     queue.add(target);
                 }
             }
