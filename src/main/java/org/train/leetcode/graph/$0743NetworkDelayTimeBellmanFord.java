@@ -42,7 +42,7 @@ public class $0743NetworkDelayTimeBellmanFord {
         }
 
         int max = Arrays.stream(distances).max().getAsInt();
-        return max == Integer.MAX_VALUE ? -1 : max;
+        return max == 101 ? -1 : max;
     }
 }
 
