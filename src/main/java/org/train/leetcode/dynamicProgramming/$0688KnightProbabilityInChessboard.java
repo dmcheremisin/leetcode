@@ -8,8 +8,7 @@ class $0688KnightProbabilityInChessboard {
     };
 
     public double knightProbability(int n, int k, int row, int column) {
-        Double[][][] dp = new Double[k][n][n];
-        return calcProbability(n, k, row, column, dp);
+        return calcProbability(n, k, row, column, new Double[k][n][n]);
     }
 
     private double calcProbability(int n, int k, int row, int column, Double[][][] dp) {
@@ -26,8 +25,6 @@ class $0688KnightProbabilityInChessboard {
         for (int[] dir : dirs)
             res += calcProbability(n, k - 1, row + dir[0], column + dir[1], dp) / 8;
 
-        dp[k - 1][row][column] = res;
-
-        return res;
+        return dp[k - 1][row][column] = res;
     }
 }
