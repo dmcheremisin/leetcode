@@ -49,4 +49,10 @@ class $0034FindFirstAndLastPositionOfElementTest {
         int[] result = find.searchRange(new int[]{1}, 1);
         assertArrayEquals(new int[]{0, 0}, result);
     }
+
+    @Test
+    void searchRangeTest8() {
+        int[] result = find.searchRange(new int[]{1}, 5);
+        assertArrayEquals(new int[]{-1, -1}, result);
+    }
 }
