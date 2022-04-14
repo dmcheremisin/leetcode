@@ -15,18 +15,18 @@ public class $0034FindFirstAndLastPositionOfElement {
 
         int start = 0, end = len - 1;
         while (start <= end) {
-            int mid = (start + end)/2;
-            if (target == nums[mid]) {
+            int mid = (start + end) / 2;
+            if (target > nums[mid]) {
+                start = mid + 1;
+            } else if (target < nums[mid]) {
+                end = mid - 1;
+            } else {
                 start = end = mid;
                 while (start - 1 >= 0 && nums[start - 1] == target)
                     start--;
                 while (end < len - 1 && nums[end + 1] == target)
                     end++;
                 return new int[]{start, end};
-            } else if (target < nums[mid]) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
             }
         }
         return new int[]{-1, -1};
