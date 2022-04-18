@@ -15,15 +15,13 @@ public class $0199BinaryTreeRightSideView {
         traverse(root, list, 0);
         return list;
     }
-    
+
     private void traverse(TreeNode node, List<Integer> list, int level) {
         if(node == null) return;
-        
-        if(list.size() <= level)
+
+        if (list.size() <= level)
             list.add(node.val);
-        else
-            list.set(level, node.val);
-        
+
         traverse(node.left, list, level + 1);
         traverse(node.right, list, level + 1);
     }
