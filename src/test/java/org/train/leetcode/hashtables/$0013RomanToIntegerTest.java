@@ -1,4 +1,4 @@
-package org.train.leetcode;
+package org.train.leetcode.hashtables;
 
 import org.junit.jupiter.api.Test;
 
