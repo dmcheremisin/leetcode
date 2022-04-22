@@ -20,30 +20,25 @@ public class $0200NumberOfIslands {
         int rows = grid.length;
         int cols = grid[0].length;
         int[][] directions = new int[][]{new int[]{-1, 0}, new int[]{1, 0}, new int[]{0, -1}, new int[]{0, 1}};
-        boolean[][] visited = new boolean[rows][cols];
         int num = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                if (!visited[i][j]) {
-                    if (grid[i][j] == '1') {
-                        num++;
-                        traverse(i, j, directions, grid, visited, rows, cols);
-                    } else {
-                        visited[i][j] = true;
-                    }
+                if (grid[i][j] == '1') {
+                    num++;
+                    traverse(i, j, directions, grid, rows, cols);
                 }
             }
         }
         return num;
     }
 
-    private void traverse(int row, int col, int[][] directions, char[][] grid, boolean[][] visited, int rows, int cols) {
-        visited[row][col] = true;
+    private void traverse(int row, int col, int[][] directions, char[][] grid, int rows, int cols) {
+        grid[row][col] = '0';
         for (int[] dir : directions) {
             int dRow = row + dir[0];
             int dCol = col + dir[1];
-            if (dRow >= 0 && dRow < rows && dCol >= 0 && dCol < cols && !visited[dRow][dCol] && grid[dRow][dCol] == '1')
-                traverse(dRow, dCol, directions, grid, visited, rows, cols);
+            if (dRow >= 0 && dRow < rows && dCol >= 0 && dCol < cols && grid[dRow][dCol] == '1')
+                traverse(dRow, dCol, directions, grid, rows, cols);
         }
     }
 }
