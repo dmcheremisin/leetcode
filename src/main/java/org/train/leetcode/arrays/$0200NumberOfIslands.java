@@ -19,7 +19,7 @@ public class $0200NumberOfIslands {
     public int numIslands(char[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;
-        int[][] directions = new int[][]{new int[]{-1, 0}, new int[]{1, 0}, new int[]{0, -1}, new int[]{0, 1}};
+        int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         int num = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
