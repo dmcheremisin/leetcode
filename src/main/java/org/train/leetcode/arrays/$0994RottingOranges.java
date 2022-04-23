@@ -42,8 +42,8 @@ public class $0994RottingOranges {
                 int dRow = orange[0] + dir[0];
                 int dCol = orange[1] + dir[1];
                 if (dRow >= 0 && dRow < rows && dCol >= 0 && dCol < cols && grid[dRow][dCol] == 1) {
-                    grid[dRow][dCol] = 2;
                     queue.add(new int[]{dRow, dCol});
+                    grid[dRow][dCol] = 2;
                     fresh--;
                 }
             }
