@@ -21,4 +21,14 @@ class $0168ExcelSheetColumnTitleTest {
     void convertToTitleTest3() {
         assertEquals("ZY", convertToTitle(701));
     }
+
+    @Test
+    void convertToTitleTest4() {
+        assertEquals("FXSHRXW", convertToTitle(2147483647));
+    }
+
+    @Test
+    void convertToTitleTest5() {
+        assertEquals("AZ", convertToTitle(52));
+    }
 }
