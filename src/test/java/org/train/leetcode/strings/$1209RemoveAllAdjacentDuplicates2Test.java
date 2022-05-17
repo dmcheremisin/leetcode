@@ -16,4 +16,9 @@ class $1209RemoveAllAdjacentDuplicates2Test {
     void removeDuplicatesTest2() {
         assertEquals("abcd", removeDuplicates("abcd", 2));
     }
+
+    @Test
+    void removeDuplicatesTest3() {
+        assertEquals("ps", removeDuplicates("pbbcggttciiippooaais", 2));
+    }
 }
