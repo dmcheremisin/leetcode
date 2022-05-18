@@ -25,34 +25,33 @@ public class $1209RemoveAllAdjacentDuplicates2 {
 
     public static String removeDuplicates(String s, int k) {
         LinkedList<Character> stack = new LinkedList<>();
-        for(int i = 0; i < s.length(); i++) {
+        int counter = 0;
+        char prev = '_';
+        for (int i = 0; i < s.length(); i++) {
             char charAt = s.charAt(i);
             stack.push(charAt);
+            if (prev == charAt) {
+                counter++;
+            } else {
+                prev = charAt;
+                counter = 1;
+            }
 
-            if (stack.size() >= k) {
-                Character c = stack.peek();
+            if (counter == k) {
+                for (; counter > 0; counter--) stack.pop();
 
-                int counter = 0;
-                for (Character ch : stack) {
-                    if (c.equals(ch) && counter < k) {
-                        counter++;
-                    } else if (counter == k) {
-                        break;
-                    } else {
-                        break;
-                    }
-                }
-                if (counter == k) {
-                    for (; counter > 0; counter--) {
-                        stack.pop();
+                if (!stack.isEmpty()) {
+                    prev = stack.peek();
+                    for (char next : stack) {
+                        if (next == prev) counter++;
+                        else break;
                     }
                 }
             }
         }
         StringBuilder sb = new StringBuilder();
-        while(!stack.isEmpty()) {
-            sb.append(stack.pollLast());
-        }
+        while (!stack.isEmpty()) sb.append(stack.pollLast());
+
         return sb.toString();
     }
 }
