@@ -24,12 +24,12 @@ import java.util.LinkedList;
 public class $1209RemoveAllAdjacentDuplicates2 {
 
     public static String removeDuplicates(String s, int k) {
-        LinkedList<Character> stack = new LinkedList<>();
         int counter = 0;
-        char prev = '_';
+        char prev = ' ';
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             char charAt = s.charAt(i);
-            stack.push(charAt);
+            sb.append(charAt);
             if (prev == charAt) {
                 counter++;
             } else {
@@ -38,19 +38,21 @@ public class $1209RemoveAllAdjacentDuplicates2 {
             }
 
             if (counter == k) {
-                for (; counter > 0; counter--) stack.pop();
+                int length = sb.length();
+                sb.delete(length - k, length);
+                counter = 0;
 
-                if (!stack.isEmpty()) {
-                    prev = stack.peek();
-                    for (char next : stack) {
+                if (sb.length() > 0) {
+                    int lastIndex = sb.length() - 1;
+                    prev = sb.charAt(lastIndex);
+                    for(; lastIndex >= 0; lastIndex--) {
+                        char next = sb.charAt(lastIndex);
                         if (next == prev) counter++;
                         else break;
                     }
                 }
             }
         }
-        StringBuilder sb = new StringBuilder();
-        while (!stack.isEmpty()) sb.append(stack.pollLast());
 
         return sb.toString();
     }
